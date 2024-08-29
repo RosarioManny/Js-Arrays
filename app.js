@@ -1,16 +1,16 @@
-// // Exercise 1
+// Exercise 1
 
 const foods = [];
 
 console.log("Exercise 1:", foods);
 
-// //Exercise 2
+// Exercise 2
 
 foods.push("Pizza", "Cheeseburger");
 
 console.log("Exercise 2:", foods);
 
-// //Exercise 3
+// Exercise 3
 
 foods.unshift("Taco");
 
@@ -22,19 +22,19 @@ let favFood = foods[1];
 
 console.log("Exercise 4:", favFood);
 
-// // Exercise 5
+// Exercise 5
 
 foods.splice(2, 0, "Tofu");
 
 console.log("Exercise 5:", foods);
 
-// // Exercise 6
+// Exercise 6
 
 foods.splice(1, 1, "sushi", "cupcake");
 
 console.log("Exercise 6:", foods);
 
-// // Exercise 7
+// Exercise 7
 
 let yummy = foods.slice(1, 3);
 
@@ -64,8 +64,33 @@ const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 let odds = [];
 
-for (const odds of nums) {
-  console.log(odds);
-}
+nums.forEach((oddNums) => {
+  if (oddNums % 2) {
+    odds.push(oddNums);
+  }
+});
 
 console.log("Exercise 11:", odds);
+
+// Exercise 12
+
+const fizz = [];
+const buzz = [];
+const fizzbuzz = [];
+
+nums.forEach((arrNums) => {
+  if (arrNums % 3 === 0) fizz.push(arrNums);
+});
+nums.forEach((arrNums) => {
+  if (arrNums % 5 === 0) {
+    buzz.push(arrNums);
+  }
+});
+nums.forEach((arrNums) => {
+  if (arrNums % 5 === 0 && arrNums % 3 === 0) fizzbuzz.push(arrNums);
+});
+
+console.log("Exercise 12:");
+console.log("  fizz:", fizz);
+console.log("  buzz:", buzz);
+console.log("  fizzbuzz:", fizzbuzz);
