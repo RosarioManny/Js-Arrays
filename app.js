@@ -94,3 +94,40 @@ console.log("Exercise 12:");
 console.log("  fizz:", fizz);
 console.log("  buzz:", buzz);
 console.log("  fizzbuzz:", fizzbuzz);
+
+// Exercise 13
+
+const numArrays = [
+  [100, 5, 23],
+  [15, 21, 72, 9],
+  [45, 66],
+  [7, 81, 90],
+];
+let numList = numArrays.at(-1);
+
+// numList.reverse(numArrays);
+
+// console.log("Ex", numArrays);
+
+console.log("Exercise 13:", numList);
+
+// Exercise 14
+
+const num = numArrays[2][1];
+
+console.log("Exercise 14:", num);
+
+// Exercise 15
+
+let sum = 0;
+
+numArrays.forEach((inArray) => {
+  inArray.forEach((arrNum) => {
+    sum = sum += arrNum;
+    return sum;
+  });
+});
+
+let total = sum;
+
+console.log("Exercise 15:\n", total);
